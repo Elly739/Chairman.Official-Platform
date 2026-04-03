@@ -1,26 +1,241 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-brand: #0a3d62;
+  --color-brand-deep: #072b45;
+  --color-surface: #f5f5f5;
+  --color-surface-strong: #ffffff;
+  --color-soft: #eaf1f6;
+  --color-line: rgba(10, 61, 98, 0.12);
+  --color-ink: #102133;
+  --color-muted: #5f7183;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: var(--color-surface);
+  --color-foreground: var(--color-ink);
+  --font-sans: var(--font-body);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background: var(--color-surface);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(10, 61, 98, 0.05), transparent 24%),
+    linear-gradient(180deg, #fbfcfd 0%, var(--color-surface) 100%);
+  color: var(--color-ink);
+  font-family: var(--font-body), sans-serif;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(10, 61, 98, 0.16);
+}
+
+@utility font-heading {
+  font-family: var(--font-heading), sans-serif;
+}
+
+@utility section-kicker {
+  font-family: var(--font-heading), sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--color-brand);
+}
+
+@utility section-title {
+  margin-top: 0.9rem;
+  font-family: var(--font-heading), sans-serif;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.05;
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+@utility section-copy {
+  margin-top: 1rem;
+  max-width: 42rem;
+  font-size: 1rem;
+  line-height: 2;
+  color: var(--color-muted);
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.11) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.11) 1px, transparent 1px);
+  background-size: 34px 34px;
+  mask-image: radial-gradient(circle at center, black 44%, transparent 80%);
+}
+
+.news-visual {
+  height: 14rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.news-visual-1 {
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.32), transparent 30%),
+    linear-gradient(135deg, #0a3d62, #3e6c8e);
+}
+
+.news-visual-2 {
+  background:
+    radial-gradient(circle at center, rgba(255, 255, 255, 0.25), transparent 32%),
+    linear-gradient(135deg, #164f79, #89a9c2);
+}
+
+.news-visual-3 {
+  background:
+    radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.28), transparent 35%),
+    linear-gradient(135deg, #09293f, #0f648f);
+}
+
+.news-visual-4 {
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.28), transparent 35%),
+    linear-gradient(135deg, #3e6c8e, #0a3d62);
+}
+
+.media-panel {
+  background:
+    radial-gradient(circle at top right, rgba(10, 61, 98, 0.14), transparent 30%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.18), transparent 70%);
+}
+
+@media (max-width: 768px) {
+  .news-visual {
+    height: 12rem;
+  }
+}
+.studio-input {
+  width: 100%;
+  border-radius: 1rem;
+  border: 1px solid var(--color-line);
+  background: var(--color-surface);
+  padding: 0.85rem 1rem;
+  color: var(--color-ink);
+  outline: none;
+}
+
+.studio-input:focus {
+  border-color: rgba(10, 61, 98, 0.35);
+  box-shadow: 0 0 0 3px rgba(10, 61, 98, 0.08);
+}
+
+/* Button utilities for consistent UI */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: var(--color-brand);
+  padding: 0.875rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: white;
+  box-shadow: 0 16px 30px rgba(10, 61, 98, 0.2);
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease,
+    background-color 200ms ease,
+    color 200ms ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-0.5px);
+  box-shadow: 0 20px 36px rgba(10, 61, 98, 0.26);
+}
+
+.btn-primary:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 2px var(--color-brand),
+    0 0 0 4px var(--color-background);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-line);
+  border-radius: 9999px;
+  background: var(--color-surface-strong);
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease,
+    background-color 200ms ease,
+    color 200ms ease;
+}
+
+.btn-ghost:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(16, 33, 51, 0.12);
+}
+
+.btn-ghost:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-brand);
+}
+
+.btn-brand-subtle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-line);
+  border-radius: 9999px;
+  background: var(--color-surface-strong);
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-brand);
+  transition:
+    box-shadow 200ms ease,
+    background-color 200ms ease,
+    color 200ms ease;
+}
+
+.btn-brand-subtle:hover {
+  background: var(--color-brand);
+  color: white;
+  box-shadow: 0 10px 22px rgba(10, 61, 98, 0.16);
+}
+
+/* Animation keyframes for Framer Motion synergy */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes subtle-lift {
+  0\\%, 100\\% { transform: translateY(0); }
+  50\\% { transform: translateY(-4px); }
+}
+
+/* Tailwind custom animations */
+@theme {
+  --animate-fadeInUp: fadeInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --animate-subtleLift: subtle-lift 0.3s ease-out;
+}
+
+
+
+
