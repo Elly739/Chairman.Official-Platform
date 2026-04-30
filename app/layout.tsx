@@ -1,8 +1,9 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { Montserrat, Poppins } from "next/font/google";
 import { siteConfig } from "@/lib/site";
 import "./globals.css";
 import { AnimatePresence, MotionConfig } from "framer-motion";
+import { Analytics } from "@vercel/analytics/next";
 
 export const dynamic = "force-dynamic";
 
@@ -71,6 +72,7 @@ export default function RootLayout({
             {children}
           </AnimatePresence>
         </MotionConfig>
+        <Analytics />
       </body>
     </html>
   );
