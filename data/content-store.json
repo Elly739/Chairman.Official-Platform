@@ -1,0 +1,423 @@
+{
+  "posts": [
+    {
+      "slug": "unified-create-flow-introduced",
+      "title": "Chairman.Official introduces unified Create flow across all content types",
+      "summary": "The Studio now routes public posts, posters, insights, news, and site updates through a clearer creation structure with fewer duplicate entry points.",
+      "category": "news",
+      "publishedAt": "May 25, 2026",
+      "updatedAt": "May 25, 2026",
+      "readTime": "2 min read",
+      "kicker": "Announcement",
+      "shareCaption": "Chairman.Official now has a clearer creation flow across public content types.",
+      "socialHook": "A unified Create flow is now live inside Chairman.Official Studio.",
+      "platformCopy": {
+        "instagram": "A unified Create flow is now live inside Chairman.Official Studio.",
+        "x": "Chairman.Official now routes content creation through a clearer, simpler Studio flow.",
+        "linkedin": "Chairman.Official Studio now uses a unified creation structure that reduces duplicate entry points and makes publishing easier to understand."
+      },
+      "socialCardTemplate": "portrait",
+      "portraitImage": "/uploads/portraits/portrait-main.png",
+      "portraitAlt": "Elly Okello portrait for official platform announcement",
+      "audience": "Public audience, media, supporters",
+      "tags": [
+        "Announcement",
+        "News",
+        "Official"
+      ],
+      "distributionChannels": [
+        "Website",
+        "WhatsApp",
+        "Instagram",
+        "LinkedIn"
+      ],
+      "editorialStatus": "published",
+      "featured": true,
+      "coverImage": "/uploads/portraits/portrait-main.png",
+      "coverAlt": "Official portrait used for Chairman.Official announcement card",
+      "body": [
+        "Chairman.Official has introduced a unified Create flow across the Studio so public posts, posters, insights, news updates, and site-page work are easier to begin from the right place.",
+        "The update removes duplicate entry points and gives each content type a clearer publishing path. Posts now start in Posts, Insights use a simple article-first editor, and News is organized around official cards with captions.",
+        "This change is part of a broader effort to make the platform easier to operate while keeping public communication structured, polished, and consistent."
+      ]
+    },
+    {
+      "slug": "release-1-2-0-studio-publishing-refinement",
+      "title": "Version 1.2.0 refines Studio publishing and announcement cards",
+      "summary": "The latest Studio release simplifies content creation, moves announcement cards into News, and removes old duplicated editor paths.",
+      "category": "news",
+      "publishedAt": "May 25, 2026",
+      "updatedAt": "May 25, 2026",
+      "readTime": "2 min read",
+      "kicker": "Release Notes",
+      "shareCaption": "Version 1.2.0 brings a cleaner Studio publishing structure.",
+      "socialHook": "Studio publishing is now cleaner, simpler, and more clearly separated.",
+      "platformCopy": {
+        "instagram": "Version 1.2.0 brings a cleaner Studio publishing structure.",
+        "x": "Version 1.2.0 simplifies Studio publishing and moves announcement cards into News.",
+        "linkedin": "Chairman.Official Studio version 1.2.0 refines publishing by simplifying creation paths, improving Insights, and making News the home for official announcement cards."
+      },
+      "socialCardTemplate": "campaign",
+      "portraitImage": "/uploads/portraits/portrait-main.png",
+      "portraitAlt": "Elly Okello portrait for release notes card",
+      "audience": "Public audience, media, supporters",
+      "tags": [
+        "Product Update",
+        "Release Notes",
+        "Official"
+      ],
+      "distributionChannels": [
+        "Website",
+        "WhatsApp",
+        "Instagram",
+        "LinkedIn"
+      ],
+      "editorialStatus": "published",
+      "coverImage": "/uploads/media/style.jpg",
+      "coverAlt": "Editorial portrait used for Studio release notes card",
+      "body": [
+        "Version 1.2.0 is focused on making the Studio easier to use and easier to understand.",
+        "- Unified Create system introduced\n- Insight editor simplified around article body and cover image\n- Announcement cards moved into the News workflow\n- Duplicate Create entry points removed",
+        "These refinements make the platform feel less like a set of disconnected editors and more like a structured publishing system."
+      ]
+    },
+    {
+      "slug": "elly-birthday-scheduled-drop",
+      "title": "Elly to celebrate his birthday on 16 June",
+      "summary": "A scheduled Chairman.Official birthday drop is being prepared for 16 June with a dedicated card and public caption.",
+      "category": "news",
+      "publishedAt": "May 25, 2026",
+      "updatedAt": "May 25, 2026",
+      "readTime": "1 min read",
+      "kicker": "Scheduled Drop",
+      "shareCaption": "A birthday card and public update are scheduled for 16 June.",
+      "socialHook": "A Chairman.Official birthday drop is scheduled for 16 June.",
+      "platformCopy": {
+        "instagram": "A Chairman.Official birthday drop is scheduled for 16 June.",
+        "x": "Elly's birthday update is scheduled for 16 June.",
+        "linkedin": "A birthday card and public update are being prepared as a scheduled Chairman.Official drop for 16 June."
+      },
+      "socialCardTemplate": "portrait",
+      "portraitImage": "/uploads/portraits/Hero.png",
+      "portraitAlt": "Elly Okello portrait for birthday scheduled drop",
+      "audience": "Public audience, supporters",
+      "tags": [
+        "Event",
+        "Scheduled Drop",
+        "Official"
+      ],
+      "distributionChannels": [
+        "Website",
+        "Instagram",
+        "WhatsApp"
+      ],
+      "editorialStatus": "published",
+      "coverImage": "/uploads/portraits/Hero.png",
+      "coverAlt": "Portrait card image for birthday scheduled drop",
+      "body": [
+        "A birthday card and public update for Elly is being prepared for 16 June as part of the Chairman.Official scheduled drops.",
+        "The update will use the News layer because it is time-based, public-facing, and better handled as an official card with a caption rather than a regular post.",
+        "Scheduled for 16 June."
+      ]
+    },
+    {
+      "slug": "official-statement-news-direction",
+      "title": "News section repositioned as the official voice layer",
+      "summary": "The News section is being repositioned for announcements, release notes, scheduled drops, and official statements instead of regular posts.",
+      "category": "news",
+      "publishedAt": "May 25, 2026",
+      "updatedAt": "May 25, 2026",
+      "readTime": "2 min read",
+      "kicker": "Official Statement",
+      "shareCaption": "News now carries the official voice of Chairman.Official.",
+      "socialHook": "News is now the official voice layer of Chairman.Official.",
+      "platformCopy": {
+        "instagram": "News is now the official voice layer of Chairman.Official.",
+        "x": "News now carries official announcements, release notes, scheduled drops, and statements.",
+        "linkedin": "Chairman.Official News is being repositioned as the official voice layer for announcements, release notes, scheduled drops, and public statements."
+      },
+      "socialCardTemplate": "statement",
+      "portraitImage": "/uploads/media/me.jpg",
+      "portraitAlt": "Elly Okello portrait for official statement",
+      "audience": "Public audience, media, supporters",
+      "tags": [
+        "Statement",
+        "Official Statement",
+        "Official"
+      ],
+      "distributionChannels": [
+        "Website",
+        "LinkedIn",
+        "WhatsApp"
+      ],
+      "editorialStatus": "published",
+      "coverImage": "/uploads/media/me.jpg",
+      "coverAlt": "Official statement card image",
+      "body": [
+        "The News section is being repositioned as the official voice layer of Chairman.Official.",
+        "That means it should carry announcements, release notes, scheduled drops, and official statements. Regular photos belong in Posts, long-form thinking belongs in Insights, and ceremonial cards should be treated according to their publishing purpose.",
+        "This separation keeps the platform clearer for both the people publishing and the people reading."
+      ]
+    },
+    {
+      "slug": "product-thinking-for-public-leadership",
+      "title": "Why modern public leadership needs product thinking",
+      "summary": "Public leadership becomes more trustworthy when ideas are designed with clarity, usability, and measurable outcomes in mind.",
+      "category": "blog",
+      "publishedAt": "March 12, 2026",
+      "updatedAt": "March 18, 2026",
+      "readTime": "5 min read",
+      "kicker": "Blog Essay",
+      "shareCaption": "Public leadership works best when ideas are designed with people in mind.",
+      "socialHook": "Better governance often starts with better design thinking.",
+      "audience": "Young professionals, civic innovators",
+      "tags": [
+        "Leadership",
+        "Product Thinking",
+        "Governance"
+      ],
+      "distributionChannels": [
+        "Website",
+        "Instagram Stories",
+        "X"
+      ],
+      "editorialStatus": "published",
+      "body": [
+        "Product thinking is often associated with startups, but its discipline belongs just as strongly in public leadership. At its core, it asks a simple question: are people actually experiencing the value a system claims to provide?",
+        "That question changes the quality of leadership. It calls for clearer promises, less friction, stronger feedback loops, and a constant commitment to improvement. In governance, that translates into better communication, better service design, and more visible accountability.",
+        "The same logic applies to public voice. A serious leadership platform should help people understand not only the vision being proposed, but also the structure, evidence, and discipline behind the work."
+      ],
+      "platformCopy": {
+        "instagram": "Better governance often starts with better design thinking.",
+        "x": "Public leadership improves when ideas are designed around people, clarity, and measurable outcomes.",
+        "linkedin": "Product thinking gives public leadership a practical framework for better communication, sharper service design, and more accountable execution."
+      },
+      "coverImage": "/uploads/posts/design.jpg",
+      "coverAlt": "Design-focused visual for public leadership essay",
+      "socialCardTemplate": "statement",
+      "portraitImage": "/uploads/portraits/portrait-main.png",
+      "portraitAlt": "Elly Okello portrait for leadership essay"
+    },
+    {
+      "slug": "discipline-clarity-and-public-value",
+      "title": "Leadership with clarity, pace, and measurable public value",
+      "summary": "A short statement on disciplined execution, public dignity, and the kind of leadership that must be measured by real outcomes.",
+      "category": "desk",
+      "publishedAt": "March 16, 2026",
+      "updatedAt": "March 19, 2026",
+      "readTime": "3 min read",
+      "kicker": "From the Chairman's Desk",
+      "shareCaption": "Execution, dignity, and durable progress must move together.",
+      "socialHook": "Visibility matters less than substance, discipline, and real public value.",
+      "audience": "Public audience, stakeholders",
+      "tags": [
+        "Statement",
+        "Leadership",
+        "Public Value"
+      ],
+      "distributionChannels": [
+        "Website",
+        "LinkedIn",
+        "Press"
+      ],
+      "editorialStatus": "published",
+      "body": [
+        "Leadership should never confuse visibility with value. Public life is filled with performance, but trust is built by something quieter and far more demanding: consistency, discipline, and the courage to be measured by outcomes rather than applause.",
+        "In this season, the call is clear. We must move with urgency without losing standards, and we must communicate with confidence without sacrificing honesty. Public dignity is protected when leadership treats people with seriousness and responsibility with care.",
+        "That is the standard this platform should reflect. Every statement, every project update, and every public message should point back to one principle: leadership must produce value that people can see, feel, and trust."
+      ],
+      "platformCopy": {
+        "instagram": "Visibility matters less than substance, discipline, and real public value.",
+        "x": "Durable public value comes from discipline, not performance.",
+        "linkedin": "Leadership should be measured by substance, disciplined execution, and the ability to create visible public value beyond symbolism."
+      },
+      "coverImage": "/uploads/media/style.jpg",
+      "coverAlt": "Editorial style portrait for Chairman statement",
+      "socialCardTemplate": "statement",
+      "portraitImage": "/uploads/portraits/portrait-main.png",
+      "portraitAlt": "Elly Okello official portrait for Chairman statement"
+    },
+    {
+      "slug": "founders-breakfast-briefing",
+      "title": "Founders breakfast briefing sets sharper agenda for execution partnerships",
+      "summary": "A draft reflection on how founder communities and public institutions can build more credible partnerships around urgency, clarity, and follow-through.",
+      "category": "blog",
+      "publishedAt": "March 21, 2026",
+      "updatedAt": "March 19, 2026",
+      "readTime": "4 min read",
+      "kicker": "Draft Essay",
+      "shareCaption": "A stronger partnership agenda for builders and institutions.",
+      "socialHook": "The right rooms create the right momentum when they are designed for action.",
+      "audience": "Founders, operators, policy partners",
+      "tags": [
+        "Founders",
+        "Partnerships",
+        "Execution"
+      ],
+      "distributionChannels": [
+        "Website",
+        "LinkedIn",
+        "Newsletter"
+      ],
+      "editorialStatus": "draft",
+      "body": [
+        "The most useful partnership rooms are rarely the loudest. They are the spaces where ownership becomes clear, next steps become visible, and people leave with a sharper sense of what must happen after the conversation ends.",
+        "That is the spirit behind this breakfast briefing reflection. It asks how founder communities and public institutions can build partnerships rooted not in symbolism, but in execution, responsibility, and measurable follow-through.",
+        "If handled well, this kind of conversation can do more than produce a one-day event. It can shape a lasting agenda, stronger collaboration, and a clearer story for the communities watching from the outside."
+      ],
+      "platformCopy": {
+        "instagram": "The right rooms create the right momentum when they are designed for action.",
+        "x": "Partnership rooms only matter when they produce action, ownership, and follow-through.",
+        "linkedin": "Founder and institutional partnerships work best when they are structured for execution, not symbolism. The room itself should create momentum."
+      },
+      "coverImage": "/uploads/posts/wordcamp.jpg",
+      "coverAlt": "Conference audience visual for founders briefing",
+      "socialCardTemplate": "campaign",
+      "portraitImage": "/uploads/media/elly.png",
+      "portraitAlt": "Cutout portrait for founders briefing cards"
+    }
+  ],
+  "projects": [
+    {
+      "slug": "portfolio",
+      "name": "Portfolio",
+      "status": "Published Repository",
+      "timeline": "Live showcase",
+      "summary": "A modern, responsive portfolio website showcasing software engineering work, innovation, and a strong personal digital presence.",
+      "impact": "The portfolio project acts as a polished public entry point, bringing together proof of work, services, experience, and contact pathways in one place that is easy for collaborators, recruiters, and partners to review.",
+      "highlights": [
+        "Modern responsive interface with dark and light theme support",
+        "Combines work samples, services, testimonials, and contact flow",
+        "Strengthens public credibility through a refined personal web presence"
+      ],
+      "owner": "Elly Okello",
+      "editorialStatus": "ready",
+      "nextUpdate": "April 30, 2026",
+      "repoUrl": "https://github.com/Elly739/Portfolio",
+      "coverImage": "/media/project-cover.svg",
+      "coverAlt": "Portfolio cover image"
+    },
+    {
+      "slug": "smartwaste-ke",
+      "name": "Smartwaste.ke",
+      "status": "Active Build",
+      "timeline": "Ongoing development",
+      "summary": "A digital waste collection and tracking system powered by youth, technology, and a circular economy model.",
+      "impact": "Smartwaste.ke connects civic technology to environmental action by making waste pickup, recycling incentives, and operational visibility more practical, measurable, and easier to coordinate in real time.",
+      "highlights": [
+        "Real-time waste pickup and tracking direction",
+        "Built around youth participation and circular economy thinking",
+        "Strong civic-tech flagship for public value and sustainability storytelling"
+      ],
+      "owner": "Elly Okello",
+      "editorialStatus": "ready",
+      "nextUpdate": "April 30, 2026",
+      "repoUrl": "https://github.com/Elly739/Smartwaste.ke",
+      "coverImage": "/media/project-cover.svg",
+      "coverAlt": "Smartwaste.ke cover image"
+    },
+    {
+      "slug": "learnlight",
+      "name": "learnlight",
+      "status": "Prototype",
+      "timeline": "Learning platform in progress",
+      "summary": "A full-stack learning platform with an Express and PostgreSQL backend and a Vite plus React frontend.",
+      "impact": "learnlight expands the platform into education technology by focusing on how learners access content, interact with a structured product experience, and move through a more modern digital learning flow.",
+      "highlights": [
+        "Full-stack architecture spanning backend and frontend",
+        "Built for structured learning delivery and platform growth",
+        "Shows execution beyond static websites into product systems"
+      ],
+      "owner": "Elly Okello",
+      "editorialStatus": "active",
+      "nextUpdate": "April 30, 2026",
+      "repoUrl": "https://github.com/Elly739/learnlight",
+      "coverImage": "/media/project-cover.svg",
+      "coverAlt": "learnlight cover image"
+    },
+    {
+      "slug": "be-my-valentine",
+      "name": "BeMyValentine",
+      "status": "Published App",
+      "timeline": "Seasonal interactive release",
+      "summary": "A playful Valentine desktop app built with Python and Tkinter, featuring a dodging 'No' button, celebration effects, and a cinematic 'Yes' flow.",
+      "impact": "BeMyValentine shows range in experience design by turning a simple emotional prompt into a polished interactive product with humour, motion, and shareable personality.",
+      "highlights": [
+        "Python desktop app rather than a web-only concept",
+        "Includes celebratory effects, hidden surprises, and playful interaction",
+        "Demonstrates creativity and product personality alongside formal work"
+      ],
+      "owner": "Elly Okello",
+      "editorialStatus": "backlog",
+      "nextUpdate": "April 30, 2026",
+      "repoUrl": "https://github.com/Elly739/BeMyValentine",
+      "coverImage": "/media/project-cover.svg",
+      "coverAlt": "BeMyValentine cover image"
+    },
+    {
+      "slug": "teachable-machine-image-model",
+      "name": "Teachable Machine Image Model",
+      "status": "Experiment",
+      "timeline": "ML starter repository",
+      "summary": "A simple starter project for running image classification models exported from Google's Teachable Machine using JavaScript and TensorFlow.js.",
+      "impact": "This repository adds practical AI experimentation to the platform by showing how trained image models can move from prototype export into usable JavaScript-based prediction workflows.",
+      "highlights": [
+        "Applies TensorFlow.js to image classification workflows",
+        "Connects no-code model training with code-based implementation",
+        "Adds visible machine-learning experimentation to the project mix"
+      ],
+      "owner": "Elly Okello",
+      "editorialStatus": "active",
+      "nextUpdate": "April 30, 2026",
+      "repoUrl": "https://github.com/Elly739/Teachable-Machine-Image-Model",
+      "coverImage": "/media/project-cover.svg",
+      "coverAlt": "Teachable Machine Image Model cover image"
+    }
+  ],
+  "mediaItems": [
+    {
+      "title": "Leadership Session",
+      "type": "Personal Photo",
+      "description": "A personal leadership moment from the Chairman.Official visual archive.",
+      "src": "/uploads/media/me.jpg",
+      "alt": "Elly Okello leadership session portrait",
+      "createdAt": "March 19, 2026",
+      "publicPost": true,
+      "caption": "Quiet preparation often says more about leadership than the loudest stage.",
+      "channelLabel": "Personal Photo"
+    },
+    {
+      "title": "Official Portrait",
+      "type": "Portrait",
+      "description": "A formal portrait for Chairman.Official public visibility.",
+      "src": "/uploads/portraits/portrait-main.png",
+      "alt": "Elly Okello official portrait",
+      "createdAt": "March 19, 2026",
+      "publicPost": true,
+      "caption": "Leadership presence matters when it reflects discipline, clarity, and public purpose.",
+      "channelLabel": "Portrait Post"
+    },
+    {
+      "title": "Three-Piece Moment",
+      "type": "Personal Photo",
+      "description": "A polished personal image for premium social and media use.",
+      "src": "/uploads/media/three-piece.jpg",
+      "alt": "Elly Okello in a three-piece suit",
+      "createdAt": "March 19, 2026",
+      "publicPost": true,
+      "caption": "The standard behind the image should always match the standard behind the work.",
+      "channelLabel": "Personal Photo"
+    },
+    {
+      "title": "Editorial Portrait",
+      "type": "Portrait",
+      "description": "A portrait-led visual for Chairman.Official storytelling.",
+      "src": "/uploads/media/style.jpg",
+      "alt": "Elly Okello editorial portrait",
+      "createdAt": "March 19, 2026",
+      "publicPost": true,
+      "caption": "Public confidence grows where leadership carries both calm and conviction.",
+      "channelLabel": "Portrait Post"
+    }
+  ]
+}
