@@ -276,6 +276,9 @@ export async function savePost(
 
     redirect(studioPath);
   } catch (error) {
+    if (error instanceof Error && error.message.includes("NEXT_REDIRECT")) {
+      throw error;
+    }
     const message = error instanceof Error ? error.message : "Saving failed. Please try again.";
     return { message };
   }
@@ -360,6 +363,9 @@ export async function savePosterQuick(
 
     redirect(studioPath);
   } catch (error) {
+    if (error instanceof Error && error.message.includes("NEXT_REDIRECT")) {
+      throw error;
+    }
     const message = error instanceof Error ? error.message : "Publishing failed. Please try again.";
     return { message };
   }
@@ -384,6 +390,9 @@ export async function updatePostEditorialStatus(slug: string, status: EditorialS
     revalidateContentPaths(getPublicPath(post.category, post.slug), `/studio/posts/${post.slug}`);
     redirect("/studio/posts");
   } catch (error) {
+    if (error instanceof Error && error.message.includes("NEXT_REDIRECT")) {
+      throw error;
+    }
     const message = error instanceof Error ? error.message : "Updating status failed. Please try again.";
     redirect(`/studio/posts?error=${encodeURIComponent(message)}`);
   }
@@ -446,6 +455,9 @@ export async function saveProject(
     revalidateContentPaths(`/projects/${slug}`, `/studio/projects/${slug}`);
     redirect(`/studio/projects/${slug}`);
   } catch (error) {
+    if (error instanceof Error && error.message.includes("NEXT_REDIRECT")) {
+      throw error;
+    }
     const message = error instanceof Error ? error.message : "Saving project failed. Please try again.";
     return { message };
   }
@@ -464,6 +476,9 @@ export async function deletePost(slug: string) {
     revalidateContentPaths(getPublicPath(post.category, slug), `/studio/posts/${post.slug}`);
     redirect("/studio/posts");
   } catch (error) {
+    if (error instanceof Error && error.message.includes("NEXT_REDIRECT")) {
+      throw error;
+    }
     const message = error instanceof Error ? error.message : "Deleting failed. Please try again.";
     redirect(`/studio/posts?error=${encodeURIComponent(message)}`);
   }
