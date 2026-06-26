@@ -2,7 +2,7 @@
 
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
-import { getPosterDesignPreset, type PosterKind } from "@/content/poster-designs";
+import { getPosterDesignPreset, posterDesignPresets, type PosterKind } from "@/content/poster-designs";
 import type { ProjectEditorialStatus } from "@/content/projects";
 import type { EditorialStatus, PostCategory, SocialCardTemplate } from "@/content/posts";
 import { getEventOccasionOption } from "@/lib/event-card-concepts";
@@ -293,8 +293,8 @@ export async function savePosterQuick(
     return { message: "Write the note that should appear on the poster before publishing." };
   }
 
-  const design = getPosterDesignPreset(designId);
-  if (!design) {
+  const fallbackDesign = getPosterDesignPreset(designId) ?? posterDesignPresets.find((preset) => preset.kind === kind);
+  if (!fallbackDesign) {
     return { message: "Choose one poster design before publishing." };
   }
 
@@ -330,9 +330,9 @@ export async function savePosterQuick(
       x: note,
       linkedin: note,
     },
-    socialCardTemplate: kind === "event" ? "statement" : design.template,
-    portraitImage: kind === "event" ? undefined : design.portraitImage,
-    portraitAlt: kind === "event" ? undefined : design.portraitAlt,
+    socialCardTemplate: kind === "event" ? "statement" : fallbackDesign.template,
+    portraitImage: kind === "event" ? undefined : fallbackDesign.portraitImage,
+    portraitAlt: kind === "event" ? undefined : fallbackDesign.portraitAlt,
     audience: getPosterAudience(destination),
     tags: [
       "Poster",
@@ -343,8 +343,8 @@ export async function savePosterQuick(
     distributionChannels: getPosterChannels(destination),
     editorialStatus: "published",
     featured: false,
-    coverImage: kind === "event" ? undefined : design.coverImage,
-    coverAlt: kind === "event" ? undefined : design.coverAlt,
+    coverImage: kind === "event" ? undefined : fallbackDesign.coverImage,
+    coverAlt: kind === "event" ? undefined : fallbackDesign.coverAlt,
     body: [note],
   });
 

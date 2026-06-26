@@ -111,19 +111,30 @@ export default async function StudioOverviewPage() {
       <div className="mt-8 grid gap-6 xl:grid-cols-[1.1fr_0.9fr]">
         <article className="rounded-[2rem] bg-[linear-gradient(145deg,_#0a3d62,_#0d517f)] p-8 text-white shadow-[0_20px_60px_rgba(10,61,98,0.18)]">
           <p className="text-xs uppercase tracking-[0.2em] text-white/68">Primary focus</p>
-          <h2 className="mt-8 font-heading text-3xl font-semibold">{featuredPost.title}</h2>
-          <p className="mt-4 max-w-2xl text-base leading-8 text-white/78">{featuredPost.shareCaption}</p>
-          <div className="mt-6 flex flex-wrap gap-3">
-            {featuredPost.distributionChannels.map((channel) => (
-              <span key={channel} className="rounded-full border border-white/16 bg-white/10 px-4 py-2 text-sm font-medium text-white/84">
-                {channel}
-              </span>
-            ))}
-          </div>
+          {featuredPost ? (
+            <>
+              <h2 className="mt-8 font-heading text-3xl font-semibold">{featuredPost.title}</h2>
+              <p className="mt-4 max-w-2xl text-base leading-8 text-white/78">{featuredPost.shareCaption}</p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                {featuredPost.distributionChannels.map((channel) => (
+                  <span key={channel} className="rounded-full border border-white/16 bg-white/10 px-4 py-2 text-sm font-medium text-white/84">
+                    {channel}
+                  </span>
+                ))}
+              </div>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Link href={`/studio/posts/${featuredPost.slug}`} className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-[var(--color-brand)]">
+                  Open featured poster
+                </Link>
+              </div>
+            </>
+          ) : (
+            <>
+              <h2 className="mt-8 font-heading text-3xl font-semibold">No featured post yet</h2>
+              <p className="mt-4 max-w-2xl text-base leading-8 text-white/78">Create and publish your first post to see it featured here.</p>
+            </>
+          )}
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link href={`/studio/posts/${featuredPost.slug}`} className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-[var(--color-brand)]">
-              Open featured poster
-            </Link>
             <Link href="/studio/posts" className="rounded-full border border-white/16 bg-white/10 px-5 py-3 text-sm font-semibold text-white">
               Create post
             </Link>
@@ -358,7 +369,7 @@ export default async function StudioOverviewPage() {
               <span className="font-semibold text-[var(--color-ink)]">Draft queue:</span> {draftPosts.length ? `${draftPosts[0].title} is your newest draft.` : "No drafts are sitting idle."}
             </div>
             <div className="rounded-[1.4rem] bg-[var(--color-surface)] px-5 py-4 text-sm leading-7 text-[var(--color-muted)]">
-              <span className="font-semibold text-[var(--color-ink)]">Project track:</span> Prepare the next update for {nextProject.name}.
+              <span className="font-semibold text-[var(--color-ink)]">Project track:</span> {nextProject ? `Prepare the next update for ${nextProject.name}.` : "No projects yet. Add your first project."}
             </div>
             <div className="rounded-[1.4rem] bg-[var(--color-surface)] px-5 py-4 text-sm leading-7 text-[var(--color-muted)]">
               <span className="font-semibold text-[var(--color-ink)]">Audience:</span> Latest activity is from {latestAudienceName}.

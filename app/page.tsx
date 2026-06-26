@@ -70,17 +70,29 @@ export default function Home() {
                 <div className="absolute right-[-2rem] top-[-1.5rem] h-32 w-32 rounded-full bg-white/12 blur-3xl" />
                 <div className="absolute bottom-[-1.5rem] left-[-1rem] h-32 w-32 rounded-full bg-cyan-300/15 blur-3xl" />
                 <div className="relative flex min-h-[28rem] flex-col justify-between">
-                  <div className="flex items-center justify-between text-xs font-medium uppercase tracking-[0.28em] text-white/70">
-                    <span>Featured Story</span>
-                    <span>{featuredPost.publishedAt}</span>
-                  </div>
-                  <div>
-                    <p className="text-xs uppercase tracking-[0.24em] text-white/65">{featuredPost.kicker}</p>
-                    <h2 className="mt-3 max-w-md font-heading text-4xl font-semibold leading-tight text-white">
-                      {featuredPost.title}
-                    </h2>
-                    <p className="mt-4 max-w-sm text-base leading-7 text-white/80">{featuredPost.summary}</p>
-                  </div>
+                  {featuredPost ? (
+                    <>
+                      <div className="flex items-center justify-between text-xs font-medium uppercase tracking-[0.28em] text-white/70">
+                        <span>Featured Story</span>
+                        <span>{featuredPost.publishedAt}</span>
+                      </div>
+                      <div>
+                        <p className="text-xs uppercase tracking-[0.24em] text-white/65">{featuredPost.kicker}</p>
+                        <h2 className="mt-3 max-w-md font-heading text-4xl font-semibold leading-tight text-white">
+                          {featuredPost.title}
+                        </h2>
+                        <p className="mt-4 max-w-sm text-base leading-7 text-white/80">{featuredPost.summary}</p>
+                      </div>
+                    </>
+                  ) : (
+                    <div className="grid gap-2">
+                      <p className="text-xs uppercase tracking-[0.24em] text-white/65">Welcome</p>
+                      <h2 className="mt-3 max-w-md font-heading text-4xl font-semibold leading-tight text-white">
+                        Chairman.Official Platform
+                      </h2>
+                      <p className="mt-4 max-w-sm text-base leading-7 text-white/80">A platform for vision, discipline, and visible work.</p>
+                    </div>
+                  )}
                   <div className="grid gap-3 sm:grid-cols-2">
                     <article className="rounded-[1.25rem] border border-white/15 bg-white/8 p-4 text-white backdrop-blur-sm transition-all hover:bg-white/12 hover:border-white/25">
                       <p className="text-xs uppercase tracking-[0.24em] text-white/65">Public Voice</p>

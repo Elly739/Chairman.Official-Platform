@@ -43,7 +43,6 @@ function buildPreviewHeadline(note: string, destination: PostCategory, kind: Pos
   const cleaned = note.replace(/\s+/g, " ").trim();
   if (!cleaned) {
     if (kind === "event") return "A polished event poster preview";
-    if (kind === "announcement") return "Official announcement poster preview";
     return destination === "desk" ? "Chairman's Desk quote poster" : "Insight-led quote poster";
   }
 
@@ -125,7 +124,7 @@ export function StudioPosterCreateFlow() {
           <div className="mt-6 grid gap-3 text-sm leading-6 text-[var(--color-muted)] md:grid-cols-4">
             <div className="rounded-[1rem] bg-white px-4 py-3">
               <p className="font-semibold text-[var(--color-ink)]">1. Type</p>
-              <p>Event, announcement, or quote card.</p>
+              <p>Event card or quote card.</p>
             </div>
             <div className="rounded-[1rem] bg-white px-4 py-3">
               <p className="font-semibold text-[var(--color-ink)]">2. Design</p>
@@ -393,10 +392,10 @@ export function StudioPosterCreateFlow() {
                   </div>
 
                   <div className="space-y-4">
-                    <div className="max-w-[88%] rounded-[1.2rem] bg-[rgba(10,61,98,0.72)] p-5 backdrop-blur-sm">
+                    <div className="max-h-[58%] max-w-[92%] overflow-hidden rounded-[1.2rem] bg-[rgba(10,61,98,0.72)] p-5 backdrop-blur-sm">
                       <p className="text-[11px] uppercase tracking-[0.22em] text-white/64">Poster note preview</p>
-                      <h3 className="mt-3 font-heading text-3xl font-semibold leading-tight text-white">{previewHeadline}</h3>
-                      <p className="mt-4 text-sm leading-7 text-white/86">
+                      <h3 className="mt-3 font-heading text-2xl font-semibold leading-tight text-white">{note ? getPosterKindLabel(posterKind) : previewHeadline}</h3>
+                      <p className="mt-4 break-words text-base leading-7 text-white/88">
                         {note || "Your note will appear here once you start typing. Keep it clear, public-facing, and strong enough to stand on its own."}
                       </p>
                     </div>

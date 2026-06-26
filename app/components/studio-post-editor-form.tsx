@@ -76,6 +76,7 @@ export function StudioPostEditorForm({
   const deleteAction = post ? deletePost.bind(null, post.slug) : null;
 
   const [title, setTitle] = useState(post?.title ?? "");
+  const [slug, setSlug] = useState(post?.slug ?? "");
   const [category, setCategory] = useState(post?.category ?? defaultCategory ?? "news");
   const [editorialStatus, setEditorialStatus] = useState(post?.editorialStatus ?? "draft");
   const [kicker, setKicker] = useState(post?.kicker ?? defaultKicker ?? "");
@@ -187,16 +188,19 @@ export function StudioPostEditorForm({
             <h2 className="mt-2 font-heading text-2xl font-semibold text-[var(--color-ink)]">Post basics</h2>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-2">
-            <label className="grid gap-2 text-sm font-medium text-[var(--color-ink)]">
-              Title
-              <input name="title" value={title} onChange={(event) => setTitle(event.target.value)} required className="studio-input" />
-            </label>
-            <label className="grid gap-2 text-sm font-medium text-[var(--color-ink)]">
-              Slug
-              <input name="slug" defaultValue={post?.slug ?? ""} placeholder="generated-from-title" className="studio-input" />
-            </label>
-          </div>
+<div className="grid gap-4 md:grid-cols-2">
+             <label className="grid gap-2 text-sm font-medium text-[var(--color-ink)]">
+               Title
+               <input name="title" value={title} onChange={(event) => setTitle(event.target.value)} required className="studio-input" />
+             </label>
+             <label className="grid gap-2 text-sm font-medium text-[var(--color-ink)]">
+               Slug
+               <input name="slug" value={slug} onChange={(event) => setSlug(event.target.value)} placeholder="generated-from-title" className="studio-input" />
+             </label>
+           </div>
+           {slug && (
+             <p className="text-xs text-[var(--color-muted)]">Slug will be auto-generated from title if left empty. Required format: lowercase-letters-and-numbers only. Cannot be changed after publishing.</p>
+           )}
 
           <div className="grid gap-4 md:grid-cols-3">
             <label className="grid gap-2 text-sm font-medium text-[var(--color-ink)]">
@@ -443,9 +447,9 @@ export function StudioPostEditorForm({
           </label>
         </section>
 
-        {state.message ? (
-          <p className="rounded-[1rem] bg-rose-50 px-4 py-3 text-sm text-rose-700">{state.message}</p>
-        ) : null}
+{state.message ? (
+           <p className={`rounded-[1rem] px-4 py-3 text-sm ${state.message.includes("success") ? "bg-emerald-50 text-emerald-700" : "bg-rose-50 text-rose-700"}`}>{state.message}</p>
+         ) : null}
 
         <div className="flex flex-col gap-3 rounded-[1.4rem] border border-[var(--color-line)] bg-[var(--color-surface)] p-4 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-sm leading-6 text-[var(--color-muted)]">After you save, scroll below this editor to open or download the final export cards.</p>

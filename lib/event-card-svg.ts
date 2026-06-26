@@ -191,11 +191,11 @@ function renderTopDecor(event: EventCardConcept) {
   `;
 }
 
-function renderMessageLines(message: string) {
-  return wrapLines(message, 34)
+function renderMessageLines(message: string, startY: number) {
+  return wrapLines(message, 42)
     .slice(0, 3)
     .map(
-      (line, index) => `<text x="540" y="${804 + index * 40}" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="26" font-weight="500" fill="#38587a" letter-spacing="0.25">${escapeXml(line)}</text>`,
+      (line, index) => `<text x="540" y="${startY + index * 36}" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="24" font-weight="500" fill="#38587a" letter-spacing="0.15">${escapeXml(line)}</text>`,
     )
     .join("");
 }
@@ -260,7 +260,11 @@ function renderFooter(event: EventCardConcept) {
 }
 
 export function renderEventCardSvg(event: EventCardConcept) {
-  const titleLines = wrapLines(event.title.toUpperCase(), 16);
+  const titleLines = wrapLines(event.title.toUpperCase(), 15).slice(0, 2);
+  const titleFontSize = titleLines.length > 1 ? 56 : 68;
+  const titleLineGap = titleLines.length > 1 ? 62 : 74;
+  const titleStartY = titleLines.length > 1 ? 714 : 730;
+  const messageStartY = titleStartY + titleLines.length * titleLineGap + 34;
 
   return `
     <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080" role="img" aria-label="${escapeXml(event.title)} Chairman.Official event card">
@@ -297,10 +301,10 @@ export function renderEventCardSvg(event: EventCardConcept) {
       ${renderOrnament(844, 650, event.primary)}
       ${titleLines
         .map(
-          (line, index) => `<text x="540" y="${730 + index * 74}" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-size="68" font-weight="800" letter-spacing="12" fill="${event.primary}">${escapeXml(line)}</text>`,
+          (line, index) => `<text x="540" y="${titleStartY + index * titleLineGap}" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-size="${titleFontSize}" font-weight="800" letter-spacing="10" fill="${event.primary}">${escapeXml(line)}</text>`,
         )
         .join("")}
-      ${renderMessageLines(event.message)}
+      ${renderMessageLines(event.message, messageStartY)}
 
       ${renderFooter(event)}
     </svg>
