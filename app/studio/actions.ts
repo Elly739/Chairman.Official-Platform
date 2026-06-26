@@ -484,12 +484,6 @@ export async function deletePost(slug: string) {
   }
 }
 
-  deletePostFromStore(slug);
-  revalidateContentPaths(getPublicPath(post.category, slug), `/studio/posts/${slug}`);
-  redirect("/studio/posts");
-}
-
-
 export async function setInquiryHandled(id: string, handled: boolean) {
   await requireStudioAuth();
   markInquiryHandled(id, handled);
