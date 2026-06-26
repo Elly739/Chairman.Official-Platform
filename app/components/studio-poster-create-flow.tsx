@@ -394,7 +394,9 @@ export function StudioPosterCreateFlow() {
                   <div className="space-y-4">
                     <div className="max-h-[58%] max-w-[92%] overflow-hidden rounded-[1.2rem] bg-[rgba(10,61,98,0.72)] p-5 backdrop-blur-sm">
                       <p className="text-[11px] uppercase tracking-[0.22em] text-white/64">Poster note preview</p>
-                      <h3 className="mt-3 font-heading text-2xl font-semibold leading-tight text-white">{note ? getPosterKindLabel(posterKind) : previewHeadline}</h3>
+                      <h3 className="mt-3 font-heading text-2xl font-semibold leading-tight text-white">
+                        {note ? note.split(/[.!?]/)[0]?.trim() || note.slice(0, 68) : previewHeadline}
+                      </h3>
                       <p className="mt-4 break-words text-base leading-7 text-white/88">
                         {note || "Your note will appear here once you start typing. Keep it clear, public-facing, and strong enough to stand on its own."}
                       </p>
